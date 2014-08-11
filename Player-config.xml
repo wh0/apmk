@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<flex-config>
+	<target-player>14.0</target-player>
+	<swf-version>25</swf-version>
+	<compiler>
+		<external-library-path>
+			<path-element>libs/playerglobal{targetPlayerMajorVersion}_{targetPlayerMinorVersion}.swc</path-element>
+		</external-library-path>
+	</compiler>
+</flex-config>

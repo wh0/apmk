@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+	<defs>
+		<linearGradient id="back" x2="0%" y2="100%">
+			<stop offset="0%" stop-color="#ff0055" />
+			<stop offset="100%" stop-color="#c00040" />
+		</linearGradient>
+		<mask id="border">
+			<rect width="16" height="16" rx="2" fill="white" />
+		</mask>
+		<!-- hack to make the numeral heavier -->
+		<filter id="thicken">
+			<feComponentTransfer>
+				<feFuncR type="gamma" exponent="0.5" />
+				<feFuncG type="gamma" exponent="0.5" />
+				<feFuncB type="gamma" exponent="0.5" />
+			</feComponentTransfer>
+		</filter>
+		<mask id="numeral">
+			<g filter="url(#thicken)">
+				<rect x="1" y="2" width="12" height="14" fill="white" />
+				<text x="-5" y="21" font-size="30" font-family="Arial Unicode MS">&#x277a;</text>
+			</g>
+		</mask>
+		<mask id="edge">
+			<rect width="16" height="16" fill="white" />
+			<!-- radius here is still 2, to make the corners heavier -->
+			<rect x="1" y="1" width="14" height="14" rx="2" />
+		</mask>
+	</defs>
+	<g mask="url(#border)">
+		<rect width="16" height="16" fill="url(#back)" />
+		<rect x="1" y="2" width="12" height="14" fill="#ffffff" mask="url(#numeral)" />
+		<!-- real icon used cleartype to smooth the numeral -->
+		<rect width="16" height="16" mask="url(#edge)" fill="rgba(0,0,0,0.33)" />
+	</g>
+</svg>

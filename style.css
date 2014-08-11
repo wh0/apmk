@@ -1,0 +1,53 @@
+body{margin:20px 20px 80px 80px;width:700px;font-size:20px;font-family:Segoe UI,sans-serif;}
+a{text-decoration:none;color:#c00040;}
+pre{font-family:inherit;white-space:pre-wrap;}
+#movie{position:absolute;}
+.nav{margin:20px 0 20px;min-height:28px;}
+.nav a{display:inline-block;margin-right:20px;}
+.nav a.active{color:#ff0055;}
+.main{margin:20px 0;}
+.header{margin:20px 0;}
+.header h1{display:inline;margin:0 20px 0 0;}
+.loading .header h1:after{margin:-1px -1px -1px 19px;content:url(loading.gif);}
+.detail{display:inline-block;margin:0 20px 20px 0;font-size:13px;color:#a0a0a0;}
+.item{clear:both;}
+.left{display:inline-block;border-radius:3px;padding:0 5px;margin-right:20px;background-color:#e8e8e8;text-align:right;}
+.item pre{margin:0 0 20px;font-size:14px;}
+
+.player{position:fixed;bottom:0;left:0;right:0;height:24px;background-color:#404040;line-height:24px;font-size:9px;color:#ffffff;}
+.player a{padding:0 8px;color:inherit;}
+/* .player a{display:block;float:left;position:relative;height:24px;text-align:center;font-family:Arial Unicode MS,sans-serif;color:inherit;} */
+/* .icon{display:block;position:absolute;top:0;left:0;bottom:0;right:0;margin:auto;} */
+/* .separator{display:block;float:left;margin:4px 0;border-right:1px solid #606060;height:16px;} */
+/* .play{width:80px;} */
+/* .play:before{position:absolute;top:-10px;left:20px;right:20px;border-width:0 20px 10px;border-style:solid;border-color:#404040 transparent;content:"";} */
+/* .play .icon{border-width:10px 0 10px 20px;border-style:solid;border-color:transparent #ffffff;width:0;height:0;} */
+/* .prev .icon{border-width:8px 8px 8px 0;border-style:solid;border-color:transparent #ffffff;width:0;height:0;} */
+
+.nav .root a{position:fixed;top:0;left:20px;border-width:0 20px 10px;border-style:solid;border-bottom-color:transparent;padding:18px 0 7px;width:0;}
+.nav .root a:before{display:block;margin:0 -15px;width:30px;line-height:30px;text-align:center;font-size:30px;font-family:Arial Unicode MS,sans-serif;color:#ffffff;content:"\277a ";}
+
+.bas .header{margin:20px 0;}
+.bas .item{margin-left:150px;}
+.bas .left{margin-left:-150px;width:120px;}
+.bas .nothing:after{content:"no CDs";}
+
+.album img{display:block;float:right;margin-bottom:20px;}
+.album .header pre{margin:20px 248px 0 0;}
+.ttracks:after{content:" tracks";}
+.reldate:before{content:"released ";}
+.album .item{margin-left:90px;}
+.album .left{margin-left:-90px;width:60px;}
+.album .name{margin-right:20px;}
+.trtime{display:inline-block;margin-right:20px;font-size:14px;}
+.download{display:inline-block;font-size:13px;color:#0060c0;}
+.download:before{font-size:15px;font-family:Arial Unicode MS,sans-serif;content:"\1f4be ";}
+.download:after{content:" download";}
+.download:hover{color:#0080ff;}
+
+.alt{opacity:0.375;}
+.alt .left{background-color:transparent;}
+
+.at .header h2{margin:20px 0;}
+.at .nothing:after{content:"no additional tracks";}
+.subpage{clear:both;}
