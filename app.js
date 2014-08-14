@@ -10,6 +10,7 @@ function onHashChange(e) {
 	var hashIndex = location.href.indexOf('#');
 	if (hashIndex == -1 || hashIndex >= location.href.length - 1) split = [];
 	else split = location.href.substr(hashIndex + 1).split('/');
+	console.log('onHashChange handling ' + JSON.stringify(split)); // %%%
 	for (var i = split.length - 1; i >= 0; i--) {
 		hash = {
 			datum: decodeURIComponent(split[i]),
@@ -924,6 +925,7 @@ Root.prototype.create = function (id) {
 }
 
 document.addEventListener('DOMContentLoaded', function (e) {
+	console.log('entering DOMContentLoaded'); // %%%
 	nav = document.createElement('div');
 	nav.className = 'nav';
 	main = document.createElement('div');
@@ -942,3 +944,4 @@ document.addEventListener('DOMContentLoaded', function (e) {
 	window.addEventListener('hashchange', onHashChange);
 	onHashChange(null);
 });
+console.log('app.js ready'); // %%%
