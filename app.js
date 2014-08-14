@@ -10,7 +10,7 @@ function onHashChange(e) {
 	var hashIndex = location.href.indexOf('#');
 	if (hashIndex == -1 || hashIndex >= location.href.length - 1) split = [];
 	else split = location.href.substr(hashIndex + 1).split('/');
-	console.log('onHashChange handling ' + JSON.stringify(split)); // %%%
+	console.log('onHashChange handling', split); // %%%
 	for (var i = split.length - 1; i >= 0; i--) {
 		hash = {
 			datum: decodeURIComponent(split[i]),
@@ -212,7 +212,7 @@ RTMPPlayer.prototype.playCurrent = function () {
 
 RTMPPlayer.prototype.play = function (node) {
 	this.current = node;
-	console.log('play() set current ', this.current.t); // %%%
+	console.log('play() set current', this.current.t); // %%%
 	if (this.connected) this.playCurrent();
 	if (this.paused) this.movie.resume();
 };
@@ -220,7 +220,7 @@ RTMPPlayer.prototype.play = function (node) {
 RTMPPlayer.prototype.offerLink = function (node) {
 	if (!this.current || this.current.ak != node.ak) return;
 	this.current = node;
-	console.log('offerLink() set current ', this.current.t); // %%%
+	console.log('offerLink() set current', this.current.t); // %%%
 	// %%%%%%% now what?
 };
 
@@ -229,7 +229,7 @@ RTMPPlayer.prototype.onLoad = function () {
 };
 
 RTMPPlayer.prototype.onStatus = function (info) {
-	console.log('RTMPPlayer onStatus ', info); // %%%
+	console.log('RTMPPlayer onStatus', info); // %%%
 	switch (info.code) {
 	case 'NetConnection.Connect.Success':
 		this.connected = true;
@@ -247,7 +247,7 @@ RTMPPlayer.prototype.onStatus = function (info) {
 };
 
 RTMPPlayer.prototype.onPlayStatus = function (info) {
-	console.log('RTMPPlayer.onPlayStatus ', info); // %%%
+	console.log('RTMPPlayer.onPlayStatus', info); // %%%
 	switch (info.code) {
 	case 'NetStream.Play.Complete':
 		if (this.current.next) {
