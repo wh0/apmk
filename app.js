@@ -945,3 +945,8 @@ document.addEventListener('DOMContentLoaded', function (e) {
 	onHashChange(null);
 });
 console.log('app.js ready'); // %%%
+
+// gadget-host's document.write creates a broken history entry.
+// https://bugzilla.mozilla.org/show_bug.cgi?id=1052783
+// location.replace seems to fix it
+location.replace(location.hash || '#');
