@@ -6,4 +6,11 @@ var RESOURCE_BASE = decodeURIComponent(/(?:\?|&)payload=(.+?)(?:&|$)/.exec(locat
 document.writeln('<link rel="icon" href="' + RESOURCE_BASE + 'icon.png">');
 document.writeln('<link rel="stylesheet" href="' + RESOURCE_BASE + 'style.css">');
 document.writeln('<script src="' + RESOURCE_BASE + 'app.js"><\/script>');
+// navigating in app.js makes the favicon not show up.
+// https://bugzilla.mozilla.org/show_bug.cgi?id=1062644
+// moving it out here seems to fix it
+// gadget-host's document.write creates a broken history entry.
+// https://bugzilla.mozilla.org/show_bug.cgi?id=1052783
+// location.replace seems to fix it
+location.replace(location.hash || '#');
 </script>
