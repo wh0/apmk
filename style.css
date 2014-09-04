@@ -1,7 +1,8 @@
+html{position:relative;min-height:100%;}
 body{margin:20px 20px 80px 80px;width:700px;font-size:20px;font-family:Segoe UI,sans-serif;}
 a{text-decoration:none;color:#c00040;}
 pre{font-family:inherit;white-space:pre-wrap;}
-#movie{position:absolute;}
+#movie{position:absolute;top:0;left:0;}
 .nav{margin:20px 0 20px;min-height:28px;}
 .nav a{display:inline-block;margin-right:20px;}
 .nav a.active{color:#ff0055;}
@@ -24,7 +25,8 @@ pre{font-family:inherit;white-space:pre-wrap;}
 /* .play .icon{border-width:10px 0 10px 20px;border-style:solid;border-color:transparent #ffffff;width:0;height:0;} */
 /* .prev .icon{border-width:8px 8px 8px 0;border-style:solid;border-color:transparent #ffffff;width:0;height:0;} */
 
-.nav .root a{position:fixed;top:0;left:20px;border-width:0 20px 10px;border-style:solid;border-bottom-color:transparent;padding:18px 0 7px;width:0;}
+.nav .root{display:block;position:absolute;top:0;left:0;bottom:0;}
+.nav .root a{position:sticky;top:0;margin-left:20px;border-width:0 20px 10px;border-style:solid;border-bottom-color:transparent;padding:18px 0 7px;width:0;}
 .nav .root a:before{display:block;margin:0 -15px;width:30px;line-height:30px;text-align:center;font-size:30px;font-family:Arial Unicode MS,sans-serif;color:#ffffff;content:"\277a ";}
 
 .bas .header{margin:20px 0;}
